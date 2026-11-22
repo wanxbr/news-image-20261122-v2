@@ -6,7 +6,7 @@
 
 ## Entry Description
 
-Second entry for the same bounty (news-image-20261122): a cleaner regeneration with no large text banner in the centre of the image, so the central area cannot garble. This entry copies the source image `news-image-20261122.png` to the output directory as `entry.png`, validating that it is a valid PNG with dimensions 768×768 and size at most 1 MiB.
+Second entry for the same bounty (news-image-20261122): a cleaner regeneration with no large text banner in the centre of the image, so the central area cannot garble. This entry copies the source image `news-image-20261122.png` to the output directory as `entry.png`, validating that it is a valid PNG with dimensions 768×768 and size at most 1 MiB. The `main.py` script was rewritten from scratch in this session.
 
 ## Running the Entry
 
