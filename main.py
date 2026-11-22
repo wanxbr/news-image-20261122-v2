@@ -98,11 +98,14 @@ def write_output(data: bytes, output_dir: str) -> str:
 def main() -> None:
     output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
-    if not os.path.exists(SOURCE_IMAGE):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    source_path = os.path.join(script_dir, SOURCE_IMAGE)
+
+    if not os.path.exists(source_path):
         sys.stderr.write(f"Source image not found: {SOURCE_IMAGE}\n")
         sys.exit(1)
 
-    image_data = read_source_image(SOURCE_IMAGE)
+    image_data = read_source_image(source_path)
     validate_png(image_data)
     output_path = write_output(image_data, output_dir)
 
